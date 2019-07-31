@@ -9,7 +9,7 @@ public class PulseRate implements CheckRange {
 			isCritical = false;
 		} else if (value > 60 && value <= 100) {
 			isCritical = false;
-		} else if (value < 100 && value <= 220) {
+		} else if (value > 100 && value <= 220) {
 			isCritical = true;
 		} else if (value > 220) {
 			isCritical = true;

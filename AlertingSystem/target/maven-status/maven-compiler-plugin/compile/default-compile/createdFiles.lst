@@ -1,0 +1,14 @@
+com\philips\bootcamp\output\Patient.class
+com\philips\bootcamp\input\services\PatientVitalsUpdater.class
+com\philips\bootcamp\input\services\VitalsGenerator.class
+com\philips\bootcamp\input\model\Patient.class
+com\philips\bootcamp\output\Spo2.class
+com\philips\bootcamp\output\CheckRange.class
+com\philips\bootcamp\output\AlertSystem.class
+com\philips\bootcamp\input\services\PulseRate.class
+com\philips\bootcamp\input\services\Spo2.class
+com\philips\bootcamp\input\services\Temperature.class
+com\philips\bootcamp\output\VitalsReader.class
+com\philips\bootcamp\input\services\SendOutput.class
+com\philips\bootcamp\output\PulseRate.class
+com\philips\bootcamp\output\Temperature.class

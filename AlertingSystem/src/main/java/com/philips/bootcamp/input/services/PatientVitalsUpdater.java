@@ -3,7 +3,7 @@ package com.philips.bootcamp.input.services;
 import java.text.DecimalFormat;
 import com.philips.bootcamp.input.model.*;
 
-public class InputGenerator {
+public class PatientVitalsUpdater {
 
 	public void updatePatientVitals(Patient patient) {
 		float temperatureVal = new Temperature().getUpdatedTemperatureVal();

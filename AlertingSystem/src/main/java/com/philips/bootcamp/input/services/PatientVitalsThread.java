@@ -5,16 +5,15 @@ import com.philips.bootcamp.input.model.*;
 import java.util.TimerTask;
 
 
-public class ReminderTask extends TimerTask {
+public class PatientVitalsThread extends TimerTask {
 	Patient patient;
-	String patientId;
 
-	public ReminderTask(Patient patient) {
+	public PatientVitalsThread(Patient patient) {
 		this.patient = patient;
 	}
 
 	public void run() {
-		new InputGenerator().updatePatientVitals(patient);
+		new PatientVitalsUpdater().updatePatientVitals(patient);
 		new SendOutput().outputJson(patient);
 	}
 }

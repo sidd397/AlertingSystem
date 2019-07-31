@@ -13,10 +13,6 @@ public class Patient {
 		this.pulseRate = pulseRate;
 	}
 
-	public Patient() {
-
-	}
-
 	public String getPatientId() {
 		return patientId;
 	}

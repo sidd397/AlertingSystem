@@ -9,12 +9,4 @@ public class Spo2 {
 		updatedSpo2Val = new VitalsGenerator().randomNumberFunction(lowerRange, upperRange);
 		return updatedSpo2Val;
 	}
-
-	// public void setLowerRange(float lowerRange) {
-	// this.lowerRange = lowerRange;
-	// }
-
-	// public void setUpperRange(float upperRange) {
-	// this.upperRange = upperRange;
-	// }
 }

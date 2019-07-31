@@ -11,12 +11,12 @@ public class SendOutput {
 		String jsonString = gson.toJson(patient);
 		byte[] buffer = jsonString.getBytes();
 		PipedOutputStream pipedOutputStream = new PipedOutputStream();
-		Controller controller = new Controller(pipedOutputStream);
+		AlertingSystemOutputApp controller = new AlertingSystemOutputApp(pipedOutputStream);
 		try {
 			pipedOutputStream.write(buffer);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		controller.getInput();
+		controller.performOperations();
 	}
 }

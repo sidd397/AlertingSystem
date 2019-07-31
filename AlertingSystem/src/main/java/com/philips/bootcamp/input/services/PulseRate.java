@@ -9,12 +9,4 @@ public class PulseRate {
 		updatedPulseRateVal = new VitalsGenerator().randomNumberFunction(lowerRange, upperRange);
 		return updatedPulseRateVal;
 	}
-
-	// public void setLowerRange(float lowerRange) {
-	// this.lowerRange = lowerRange;
-	// }
-
-	// public void setUpperRange(float upperRange) {
-	// this.upperRange = upperRange;
-	// }
 }
