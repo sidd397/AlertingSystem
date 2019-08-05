@@ -1,4 +1,4 @@
-package com.philips.bootcamp.output;
+package com.philips.bootcamp.output.model;
 
 public class Patient {
 	private String patientId;

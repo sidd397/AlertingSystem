@@ -2,7 +2,7 @@ package com.philips.bootcamp;
 
 import static org.junit.Assert.assertEquals;
 
-import com.philips.bootcamp.output.PulseRate;
+import com.philips.bootcamp.output.services.PulseRate;
 
 import org.junit.Test;
 

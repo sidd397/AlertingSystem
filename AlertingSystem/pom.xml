@@ -65,7 +65,7 @@
           <configuration>
           <archive>
             <manifest>
-              <mainClass>com.philips.bootcamp.input.controller.InputGenerator</mainClass>
+              <mainClass>com.philips.bootcamp.input.controller.AlertingSystemInputApp</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -92,7 +92,7 @@
           <configuration>
           <archive>
           <manifest>
-          <mainClass>com.philips.bootcamp.input.controller.AlertingSystemApp</mainClass>
+          <mainClass>com.philips.bootcamp.input.controller.AlertingSystemInputApp</mainClass>
           </manifest>
           </archive>
           <descriptorRefs>

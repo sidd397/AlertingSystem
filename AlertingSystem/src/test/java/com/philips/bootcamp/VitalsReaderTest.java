@@ -1,11 +1,11 @@
 package com.philips.bootcamp;
 
-import com.philips.bootcamp.output.Patient;
+import com.philips.bootcamp.output.model.Patient;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
-import com.philips.bootcamp.output.VitalsReader;
+import com.philips.bootcamp.output.services.VitalsReader;
 
 import org.junit.Test;
 

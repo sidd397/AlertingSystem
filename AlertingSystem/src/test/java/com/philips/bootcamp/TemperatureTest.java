@@ -2,7 +2,7 @@ package com.philips.bootcamp;
 
 import static org.junit.Assert.assertEquals;
 
-import com.philips.bootcamp.output.Temperature;
+import com.philips.bootcamp.output.services.Temperature;
 
 import org.junit.Test;
 

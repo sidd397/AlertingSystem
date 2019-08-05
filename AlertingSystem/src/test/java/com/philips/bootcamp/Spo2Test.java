@@ -2,7 +2,7 @@ package com.philips.bootcamp;
 
 import static org.junit.Assert.assertEquals;
 
-import com.philips.bootcamp.output.Spo2;
+import com.philips.bootcamp.output.services.Spo2;
 
 import org.junit.Test;
 

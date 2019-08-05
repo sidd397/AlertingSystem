@@ -2,146 +2,151 @@ package com.philips.bootcamp;
 
 import static org.junit.Assert.assertEquals;
 
-import com.philips.bootcamp.output.AlertSystem;
+import com.philips.bootcamp.output.services.PulseRate;
+import com.philips.bootcamp.output.services.Spo2;
+import com.philips.bootcamp.output.services.Temperature;
 
 import org.junit.Test;
 
 public class AlertSystemTest {
+	Temperature temperature = new Temperature();
+	Spo2 spo2 = new Spo2();
+	PulseRate pulseRate = new PulseRate();
     @Test
-    public void temperatureAlertValue985() {
-        String actual = new AlertSystem().temperatureAlert(98.5f);
-        assertEquals(null, actual);
+    public void alertMessageValue985() {
+        String actual = temperature.alertMessage(98.5f);
+        assertEquals("", actual);
     }
 
     @Test
-    public void temperatureAlertValue995() {
-        String actual = new AlertSystem().temperatureAlert(99.5f);
-        assertEquals(null, actual);
+    public void alertMessageValue995() {
+        String actual = temperature.alertMessage(99.5f);
+        assertEquals("", actual);
     }
 
     @Test
-    public void temperatureAlertValue1005() {
-        String actual = new AlertSystem().temperatureAlert(100.5f);
+    public void alertMessageValue1005() {
+        String actual = temperature.alertMessage(100.5f);
         assertEquals("Critical Temperature value: Fever", actual);
     }
 
     @Test
-    public void temperatureAlertValue103() {
-        String actual = new AlertSystem().temperatureAlert(103);
+    public void alertMessageValue103() {
+        String actual = temperature.alertMessage(103);
         assertEquals("Critical Temperature value: Fever", actual);
     }
 
     @Test
-    public void temperatureAlertValue104() {
-        String actual = new AlertSystem().temperatureAlert(104);
+    public void alertMessageValue104() {
+        String actual = temperature.alertMessage(104);
         assertEquals("Critical Temperature value: Hyperpyrexia", actual);
     }
 
     @Test
-    public void temperatureAlertValue105() {
-        String actual = new AlertSystem().temperatureAlert(105);
+    public void alertMessageValue105() {
+        String actual = temperature.alertMessage(105);
         assertEquals("Critical Temperature value: Hyperpyrexia", actual);
     }
 
     @Test
-    public void temperatureAlertValue106() {
-        String actual = new AlertSystem().temperatureAlert(106);
-        assertEquals(null, actual);
+    public void alertMessageValue106() {
+        String actual = temperature.alertMessage(106);
+        assertEquals("", actual);
     }
 
     @Test
-    public void temperatureAlertValue107() {
-        String actual = new AlertSystem().temperatureAlert(107);
-        assertEquals(null, actual);
+    public void alertMessageValue107() {
+        String actual = temperature.alertMessage(107);
+        assertEquals("", actual);
     }
 
     @Test
-    public void spo2AlertValue69() {
-        String actual = new AlertSystem().spo2Alert(69);
+    public void alertMessageValue69() {
+        String actual = spo2.alertMessage(69);
         assertEquals("Critical Spo2 reading: Extreme lack of oxygen, ischemic diseases may occur.", actual);
     }
 
     @Test
-    public void spo2AlertValue70() {
-        String actual = new AlertSystem().spo2Alert(70);
+    public void alertMessageValue70() {
+        String actual = spo2.alertMessage(70);
         assertEquals("Critical Spo2 reading: Hypoxemia. Unhealthy and unsafe level.", actual);
     }
 
     @Test
-    public void spo2AlertValue71() {
-        String actual = new AlertSystem().spo2Alert(71);
+    public void alertMessageValue71() {
+        String actual = spo2.alertMessage(71);
         assertEquals("Critical Spo2 reading: Hypoxemia. Unhealthy and unsafe level.", actual);
     }
     
     @Test
-    public void spo2AlertValue89() {
-        String actual = new AlertSystem().spo2Alert(89);
+    public void alertMessageValue89() {
+        String actual = spo2.alertMessage(89);
         assertEquals("Critical Spo2 reading: Hypoxemia. Unhealthy and unsafe level.", actual);
     }
 
     @Test
-    public void spo2AlertValue90() {
-        String actual = new AlertSystem().spo2Alert(90);
+    public void alertMessageValue90() {
+        String actual = spo2.alertMessage(90);
         assertEquals("Critical Spo2 reading: Hypoxemia. Unhealthy and unsafe level.", actual);
     }
 
     @Test
-    public void spo2AlertValue91() {
-        String actual = new AlertSystem().spo2Alert(91);
-        assertEquals(null, actual);
+    public void alertMessageValue91() {
+        String actual = spo2.alertMessage(91);
+        assertEquals("", actual);
     }
 
     @Test
-    public void pulseRateAlertValue39() {
-        String actual = new AlertSystem().pulseRateAlert(39);
+    public void alertMessageValue39() {
+        String actual = pulseRate.alertMessage(39);
         assertEquals("Critical PulseRate value: Below healthy resting heart rate.", actual);
     }
 
     @Test
-    public void pulseRateAlertValue40() {
-        String actual = new AlertSystem().pulseRateAlert(40);
-        assertEquals(null, actual);
+    public void alertMessageValue40() {
+        String actual = pulseRate.alertMessage(40);
+        assertEquals("", actual);
     }
 
     @Test
-    public void pulseRateAlertValue41() {
-        String actual = new AlertSystem().pulseRateAlert(41);
-        assertEquals(null, actual);
+    public void alertMessageValue41() {
+        String actual = pulseRate.alertMessage(41);
+        assertEquals("", actual);
     }
 
     @Test
-    public void pulseRateAlertValue99() {
-        String actual = new AlertSystem().pulseRateAlert(99);
-        assertEquals(null, actual);
+    public void alertMessageValue99() {
+        String actual = pulseRate.alertMessage(99);
+        assertEquals("", actual);
     }
 
     @Test
-    public void pulseRateAlertValue100() {
-        String actual = new AlertSystem().pulseRateAlert(100);
-        assertEquals(null, actual);
+    public void alertMessageValue100() {
+        String actual = pulseRate.alertMessage(100);
+        assertEquals("", actual);
     }
 
     @Test
-    public void pulseRateAlertValue101() {
-        String actual = new AlertSystem().pulseRateAlert(101);
+    public void alertMessageValue101() {
+        String actual = pulseRate.alertMessage(101);
         assertEquals("Critical PulseRate value: Acceptable if measured during exercise. Not acceptable if resting heartrate.", actual);
     }
 
     @Test
-    public void pulseRateAlertValue219() {
-        String actual = new AlertSystem().pulseRateAlert(219);
+    public void alertMessageValue219() {
+        String actual = pulseRate.alertMessage(219);
         assertEquals("Critical PulseRate value: Acceptable if measured during exercise. Not acceptable if resting heartrate.", actual);
     }
 
     @Test
-    public void pulseRateAlertValue220() {
-        String actual = new AlertSystem().pulseRateAlert(220);
+    public void alertMessageValue220() {
+        String actual = pulseRate.alertMessage(220);
         assertEquals("Critical PulseRate value: Acceptable if measured during exercise. Not acceptable if resting heartrate.", actual);
     }
 
     @Test
-    public void pulseRateAlertValue221() {
-        String actual = new AlertSystem().pulseRateAlert(221);
+    public void alertMessageValue221() {
+        String actual = pulseRate.alertMessage(221);
         assertEquals("Critical PulseRate level: Abnormally high heart rate.", actual);
     }
 }
